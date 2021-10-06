@@ -1,0 +1,20 @@
+/* table's first part css */
+.form-border {
+    border-top: solid;
+    border-left: solid;
+    border-bottom: solid;
+}
+.left-border {
+    border-right: solid;
+}
+
+/* Name and input Css */
+.input-width {
+    width: 66.6%;
+}
+
+
+.input-widthEmlail {
+    width: 70%;
+    margin: 0;
+}
