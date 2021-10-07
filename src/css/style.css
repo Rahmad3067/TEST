@@ -1,11 +1,11 @@
 /* table's first part css */
 .form-border {
-    border-top: solid;
-    border-left: solid;
-    border-bottom: solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
 }
 .left-border {
-    border-right: solid;
+    border-right: 1px solid;
 }
 
 /* Name and input Css */
