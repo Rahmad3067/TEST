@@ -3,25 +3,28 @@ import "../css/Bootstrap.css"
 import "../css/style.css"
 
 
-
+// Regex is used to check the format of email
 const emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 function Form ()  {
-    // we use hooks to chech our email if thats 
+    // we use hooks with help of a method to check that the client enter the corect email format
     const [ email, setEmail ] = useState("");
     const [ isEmailValid, setIsEmailValid ] = useState(false);
 
+    // we check our state to get the input entred by client
     const onEmailChange = ((e) =>{
        setEmail(e.target.value)
 
     });
 
+    // We check if input that entred by client is a email format with regex(emailPatern) we use 
     useEffect ( () => {
         setIsEmailValid(emailPattern.test(email))
     },[email]);
 
         return(
             <div className="container">
+            {/* Form header */}
         <div className="row pt-5">
             <div className="col-2 px-0">
                 <div className="form-border">Champ</div>
@@ -67,6 +70,7 @@ function Form ()  {
                      <option value="3">Public</option>
                  </select>
             </div>
+            {/* Check box  */}
             <div className="form-group row px-0 was-validated">
                 <label className="col-2 form-border-check" for="validationTextarea">Acceptation des conditions</label>
                 <input type="checkbox" className="form-check-input input-width-check" id="validationFormCheck1" required/>
