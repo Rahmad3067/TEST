@@ -35,12 +35,12 @@ function Form ()  {
         <form>
             <div className="form-group row px-0">
                 <label className="col-2 form-border-name" for="inputName">Nom</label>
-                <input className="col-8" type="text" placeholder="Entrez votre Nom"></input>
+                <input className="col-8 form-control input-width" type="text" placeholder="Entrez votre Nom"></input>
             </div>
             {/* Prénom input*/}
             <div className="form-group row px-0">
                 <label className="col-2  form-border-first" for="inputName">Prénom</label>
-                <input className="col-8" type="text" placeholder="Entrez votre Prénom"></input>
+                <input className="col-8 form-control input-width" type="text" placeholder="Entrez votre Prénom"></input>
             </div>
             {/* Email Input */}
             <div className="form-group row px-0">
