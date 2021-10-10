@@ -74,6 +74,7 @@ function Form ()  {
             <div className="form-group d-flex flex-column was-validated">
                 <label className="name-3" for="validationTextarea">Acceptation des conditions</label>
                 <input type="checkbox" className="form-check-input input-width-check" id="validationFormCheck1" required/>
+                <button type="button" class="btn btn-primary button-height mt-3">Envoyer</button>
             </div>
             </div>
         </form>
