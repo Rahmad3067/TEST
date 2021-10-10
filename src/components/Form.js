@@ -23,59 +23,59 @@ function Form ()  {
     },[email]);
 
         return(
-            <div className="container">
-            {/* Form header */}
-        <div className="row pt-5">
-            <div className="col-2 px-0">
-                <div className="form-border">Champ</div>
-            </div>
-            <div className="col-8 px-0">
-                <div className="form-border-type">Type</div>
-            </div>
-        </div>
-
-        {/* Nom part and input */}
-        <form>
-            <div className="form-group row px-0">
-                <label className="col-2 form-border-name" for="inputName">Nom</label>
-                <input className="col-8 form-control input-width" type="text" placeholder="Entrez votre Nom"></input>
+        <div className="container mt-5">
+        <form className="form">
+            <div className="container d-flex row">
+            {/* Nom part and input */}
+            <div className="col form-group d-flex flex-column">
+                <label className="name-1" for="inputName">Nom</label>
+                <input className="form-control radius" type="text" placeholder="Entrez votre Nom"></input>
             </div>
             {/* Prénom input*/}
-            <div className="form-group row px-0">
-                <label className="col-2  form-border-first" for="inputName">Prénom</label>
-                <input className="col-8 form-control input-width" type="text" placeholder="Entrez votre Prénom"></input>
+            <div className="col form-group">
+                <label className="name-1" for="inputName">Prénom</label>
+                <input className=" form-control radius" type="text" placeholder="Entrez votre Prénom"></input>
             </div>
-            {/* Email Input */}
-            <div className="form-group row px-0">
-                <label className="col-2 form-border-email" for="inputName">Email</label>
-                <input onChange={onEmailChange} className={ isEmailValid ? "form-control input-width is-valid " : "form-control input-width is-invalid" } type="email" placeholder="Email"/>
             </div>
-            {/* Telephone nimber input */}
-            <div className="form-group row px-0">
-                <label className="col-2 form-border-telephone" for="inputTelephone">Téléphone</label>
-                <input className="col-8 form-control input-width" type="text" placeholder="votre numéro de téléphone"></input>
+            <div className="container d-flex row" >
+            <div className="col form-group d-flex flex-column">
+                {/* Email Input */}
+                <label className="name-1" for="inputName">Email</label>
+                <input onChange={onEmailChange} className={ isEmailValid ? "form-control radius is-valid " : "form-control radius is-invalid" } type="email" placeholder="Email"/>
             </div>
+            <div className="col form-group d-flex flex-column">
+                {/* Telephone nimber input */}
+                <label className="name-1" for="inputTelephone">Téléphone</label>
+                <input className="form-control radius" type="text" placeholder="votre numéro de téléphone"></input>
+            </div>
+
+            </div>
+            <div className="container d-flex row">
             {/* Text area Input */}
-            <div className="form-group row px-0 was-validated">
-                <label className="col-2 form-border-message" for="validationTextarea">Message</label>
-                <textarea className="form-control is-invalid input-width" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+            <div className="form-group  was-validated">
+                <label className="name-1" for="validationTextarea">Message</label>
+                <textarea className="form-control is-invalid form-height radius" id="validationTextarea" placeholder="Write Your messgae" required></textarea>
             </div>
+            </div>
+            <div className="container d-flex row">
             {/* contact select */}
             <div className="form-group row px-0 was-validated">
-                <label className="col-2 form-border-contact" for="selectContact">Type de contact</label>
-                <select className="form-select input-width" required aria-label="select example">
+                <label className="name-2 ms-3" for="selectContact">Type de contact</label>
+                <select className="form-select radius ms-3" required aria-label="select example">
                      <option value="">Select(Koya, Mentor, Public)</option>
                      <option value="1">Koya</option>
                      <option value="2">Mentor</option>
                      <option value="3">Public</option>
                  </select>
             </div>
-            {/* Check box  */}
-            <div className="form-group row px-0 was-validated">
-                <label className="col-2 form-border-check" for="validationTextarea">Acceptation des conditions</label>
+            </div>
+            <div className="container d-flex row" >
+                {/* Check box  */}
+            <div className="form-group d-flex flex-column was-validated">
+                <label className="name-3" for="validationTextarea">Acceptation des conditions</label>
                 <input type="checkbox" className="form-check-input input-width-check" id="validationFormCheck1" required/>
             </div>
-
+            </div>
         </form>
          </div>
         )
