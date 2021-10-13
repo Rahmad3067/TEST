@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
 import "../css/Bootstrap.css"
 import "../css/style.css"
 
@@ -8,6 +9,7 @@ const emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".
 
 function Form ()  {
     // we use hooks with help of a method to check that the client enter the corect email format
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const [ email, setEmail ] = useState("");
     const [ isEmailValid, setIsEmailValid ] = useState(false);
 
@@ -16,6 +18,7 @@ function Form ()  {
        setEmail(e.target.value)
 
     });
+    const onSubmit = data => console.log(data);
 
     // We check if input that entred by client is a email format with regex(emailPatern) we use 
     useEffect ( () => {
@@ -24,7 +27,7 @@ function Form ()  {
 
         return(
         <div className="container mt-5">
-        <form className="form">
+        <form onSubmit={handleSubmit(onSubmit)} className="form">
             <div className="container d-flex row">
             {/* Nom part and input */}
             <div className="col form-group d-flex flex-column">
@@ -74,7 +77,7 @@ function Form ()  {
             <div className="form-group d-flex flex-column was-validated">
                 <label className="name-3" for="validationTextarea">Acceptation des conditions</label>
                 <input type="checkbox" className="form-check-input input-width-check" id="validationFormCheck1" required/>
-                <button type="button" class="btn btn-primary button-height mt-3">Envoyer</button>
+                <input type="submit" className="btn btn-primary button-height mt-3"/>
             </div>
             </div>
         </form>
